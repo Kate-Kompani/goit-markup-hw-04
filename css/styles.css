@@ -11,6 +11,11 @@
 --background-color: #2F303A;
 /* вторичный цвет фона #F5F4FA */
 --other-background-color: #F5F4FA;
+
+--hero-beckground: #C4C4C4;
+/* Цвет иконок */
+--icon-color: #AFB1B8;
+
 }
 
 /* белый - color: #FFFFFF; */
@@ -126,16 +131,17 @@ h1, h2, h3, h4, ul, p {
 
 /* Герой */
 .hero {
-    background-color: var(--background-color);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4)), url(../images/main/hero.jpg);
+    background-image: linear-gradient(to right,
+     rgba(47, 48, 58, 0.4),
+     rgba(47, 48, 58, 0.4)),
+     url(../images/main/hero.jpg);
+    background-color: var(--hero-beckground);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     max-width: 1600px;
     margin-left: auto;
-    margin-right: auto;
-    display: flax;
-    justify-content: center;    
+    margin-right: auto;    
 }
 
 .container-hero{
@@ -269,7 +275,6 @@ h1, h2, h3, h4, ul, p {
 }
 
 .cards-team {
-    /* border: 1px solid #2196F3; */
     --set-gap: 30px;
 
     display: flex;
@@ -285,6 +290,7 @@ h1, h2, h3, h4, ul, p {
     margin-left: var(--set-gap);
     margin-top: 30px;
     background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -309,6 +315,62 @@ h1, h2, h3, h4, ul, p {
 
     margin: 10px 0px 30px;
 }
+
+/*Постоянные клиенты*/
+
+.section-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section-clients-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+
+    margin-bottom: 50px;
+}
+
+.clients {
+    --set-gap: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin-left: calc(-1*var(--set-gap));    
+}
+
+.clients-item {
+    flex-basis: calc(100%/6 - var(--set-gap));
+    margin-left: var(--set-gap);
+
+    
+}
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    color: var(--icon-color);
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.clients-icon {
+    fill: currentColor;
+}
+
 
 /* Футер */
 footer {background-color: var(--background-color);}
