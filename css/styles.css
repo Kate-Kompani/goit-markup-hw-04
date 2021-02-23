@@ -240,6 +240,7 @@ h1, h2, h3, h4, ul, p {
     height: 120px;
     width: 270px;
     padding: 25px 100px;
+    margin-bottom: 30px;
 }
 
 .advantages {
@@ -250,8 +251,7 @@ h1, h2, h3, h4, ul, p {
     text-transform: uppercase;
     color: var(--title-color);
 
-    margin: 0px;
-    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .advantages-description {
@@ -259,9 +259,7 @@ h1, h2, h3, h4, ul, p {
     font-size: 14px;
     line-height: 24px;
     letter-spacing: 0.03em;
-    color: var(--text-color);
-
-    margin: 10px 0px 0px;
+    color: var(--text-color);    
 }
 
 /* секции Чем мы занимаемся*/
@@ -279,22 +277,36 @@ h1, h2, h3, h4, ul, p {
     letter-spacing: 0.03em;
     color: var(--title-color);
 
-    margin: 0px;
+    margin-bottom: 50px;
 }
 
 .cards-case {
     display: flex;
     justify-content:space-between;
-    margin: 50px 0px 0px;
-    padding: 0px;
 }
 
 .card-img:not(:last-child) {
     margin-right: 30px;
 }
 
+.card-img .thumb {
+    height: 294px;    
+}
+
+.card-img img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
 /* секция Команда */
 .section-team {background: var(--other-background-color);}
+
+.section-team .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .section-team-title {
     font-weight: bold;
@@ -304,8 +316,7 @@ h1, h2, h3, h4, ul, p {
     letter-spacing: 0.03em;
     color: var(--title-color);
 
-    margin: 0px 0px 50px;
-    padding-top: 94px;
+    margin-bottom: 50px;
 }
 
 .cards-team {
@@ -313,7 +324,7 @@ h1, h2, h3, h4, ul, p {
 
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 0px 94px;
+    
     margin: 0px;
     margin-left: -30px;
     margin-top: calc(-1 * var(--set-gap));
@@ -328,6 +339,17 @@ h1, h2, h3, h4, ul, p {
     border-radius: 0px 0px 4px 4px;
 }
 
+.card .thumb {
+    height: 260px;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .personal-name {
     font-weight: 500;
     font-size: 16px;
@@ -335,8 +357,8 @@ h1, h2, h3, h4, ul, p {
     letter-spacing: 0.03em;
     color: var(--title-color);
     text-align: center;
-
-    margin: 30px 0px 0px;
+    
+    margin-bottom: 10px;
 }
 
 .post {
@@ -347,7 +369,7 @@ h1, h2, h3, h4, ul, p {
     color: var(--text-color);
     text-align: center;
 
-    margin: 10px 0px 0px;
+    margin-bottom: 16px;
 }
 
 .social-icons {
@@ -355,13 +377,12 @@ h1, h2, h3, h4, ul, p {
     margin: 0;
     list-style: none;
     display: flex;
-    padding: 0px 32px 30px;
-    margin-top: 16px;
+    justify-content: space-between;
 }
 
-.social-icons li:not(:last-child) {
+/* .social-icons li:not(:last-child) {
     margin-right: 10px;
-}
+} */
 
 .social-icons-link {
     display: flex;
@@ -377,6 +398,10 @@ h1, h2, h3, h4, ul, p {
 .social-icons-link:focus {
     background-color: var(--accent);
     fill: #FFFFFF;
+}
+
+.team-info {
+    padding: 30px 32px;
 }
 
 /*Постоянные клиенты*/
@@ -436,7 +461,11 @@ h1, h2, h3, h4, ul, p {
 
 
 /* Футер */
-footer {background-color: var(--background-color);}
+footer {
+    background-color: var(--background-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 .logo-web-f {
     text-decoration: none;
@@ -449,16 +478,10 @@ footer {background-color: var(--background-color);}
     color: var(--accent);
     
     display: block;
-    margin: 0px 0px 0px;
-    padding-top: 60px;
+    margin-bottom: 20px;    
 }
 
 .logo-studio-f {color: #FFFFFF;}
-
-.address {
-    margin: 20px 0px 0px;
-    padding-bottom: 60px;
-}
 
 .address-f,
 .mail-f,
@@ -621,6 +644,17 @@ footer {background-color: var(--background-color);}
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
+}
+
+.services .thumb {
+    height: 294px;
+}
+
+.services img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .services:hover,
